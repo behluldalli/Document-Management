@@ -4,29 +4,62 @@
  */
 package com.mycompany.projectnew;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
  * @author behlu
  */
 public class DocumentManagementSystem {
-  private final DatabaseConnection databaseConnection;
 
-  public DocumentManagementSystem(DatabaseConnection databaseConnection) {
-    this.databaseConnection = databaseConnection;
+  private final ArrayList<Document> documents;
+  private final Scanner scanner;
+
+  public DocumentManagementSystem() {
+    documents = new ArrayList<>();
+    scanner = new Scanner(System.in);
   }
 
-  public void uploadDocument(Document document) {
-      
+  public void addDocument() {
+    System.out.print("Enter document name: ");
+    String name = scanner.nextLine();
+    System.out.print("Enter file type: ");
+    String fileType = scanner.nextLine();
+    documents.add(new Document(name, new Date(), fileType));
+    System.out.println("Document added successfully.");
   }
-
-  public List<Document> searchDocuments(String query) {
-      return null;
+  
+   public void removeDocument() {
+    System.out.print("Enter document name: ");
+    String name = scanner.nextLine();
+    for (int i = 0; i < documents.size(); i++) {
+      if (documents.get(i).getName().equals(name)) {
+        documents.remove(i);
+        System.out.println("Document removed successfully.");
+        return;
+      }
+    }
+    System.out.println("Document not found.");
   }
-
-  public void addTagToDocument(long documentId, String tag) {
-      
-  }
+   
+   public void searchDocuments() {
+    System.out.print("Enter search query: ");
+    String query = scanner.nextLine();
+    ArrayList<Document> searchResults = new ArrayList<>();
+    for (Document doc : documents) {
+      if (doc.getName().contains(query)) {
+        searchResults.add(doc);
+      }
+    }
+    if (!searchResults.isEmpty()) {
+      System.out.println("Search results:");
+      for (Document doc : searchResults) {
+        System.out.println(doc.getName());
+      }
+    } else {
+      System.out.println("No results found.");
+    }
+   }
 }
-

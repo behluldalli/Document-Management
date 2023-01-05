@@ -4,32 +4,45 @@
  */
 package com.mycompany.projectnew;
 
+import java.util.Date;
+
 /**
  *
  * @author behlu
  */
-public abstract class Document {
-  protected long id;
-  protected String name;
-  protected String[] tags;
+class Document {
 
-  public Document(long id, String name, String[] tags) {
-    this.id = id;
-    this.name = name;
-    this.tags = tags;
-  }
+    private String name;
+    private Date date;
+    private String fileType;
 
-  public long getId() {
-    return id;
-  }
+    public Document(String name, Date date, String fileType) {
+        this.name = name;
+        this.date = date;
+        this.fileType = fileType;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public String[] getTags() {
-    return tags;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public abstract String getType();
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
+    }
 }

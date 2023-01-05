@@ -4,16 +4,17 @@
  */
 package com.mycompany.projectnew;
 
+import java.util.Date;
+
 /**
  *
  * @author behlu
  */
 public class WordDocument extends Document {
-  public WordDocument(long id, String name, String[] tags) {
-    super(id, name, tags);
+  public WordDocument(String name, Date date) {
+    super(name, date, "Word");
   }
 
-  @Override
   public String getType() {
     return "Word";
   }

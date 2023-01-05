@@ -4,13 +4,15 @@
  */
 package com.mycompany.projectnew;
 
+import java.util.Date;
+
 /**
  *
  * @author behlu
  */
-public class PdfDocument extends Document {
-  public PdfDocument(long id, String name, String[] tags) {
-    super(id, name, tags);
+class PDFDocument extends Document {
+  public PDFDocument(String name, Date date) {
+    super(name, date, "PDF");
   }
 
   public String getType() {
