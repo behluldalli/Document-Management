@@ -18,21 +18,16 @@ public class DocumentManagementSystem {
     private final Scanner scanner;
 
     public DocumentManagementSystem() {
+
         documents = new ArrayList<>();
         scanner = new Scanner(System.in);
-        documents.add(new Document("PDF 1", new Date(15012023), "PDF"));
-        documents.add(new Document("PDF 2", new Date(16012023), "PDF"));
-        documents.add(new Document("PDF 3", new Date(17012023), "PDF"));
-        documents.add(new Document("Word 1", new Date(18012023), "Word"));
-        documents.add(new Document("Word 2", new Date(19012023), "Word"));
-        documents.add(new Document("Word 3", new Date(20012023), "Word"));
-        documents.add(new Document("Word 4", new Date(21012023), "Word"));
-
-        System.out.println("Number of Documents " + documents.size());
-
-        for (int i = 0; i < documents.size(); i++) {
-            System.out.println(documents.get(i).getName());
-        }
+        documents.add(new Document("Articles", new Date(123, 01, 12), "PDF"));
+        documents.add(new Document("Introduction", new Date(122, 01, 05), "PDF"));
+        documents.add(new Document("Lab Session", new Date(123, 01, 02), "PDF"));
+        documents.add(new Document("Summary", new Date(122, 11, 17), "Word"));
+        documents.add(new Document("Classes", new Date(122, 06, 19), "Word"));
+        documents.add(new Document("Java", new Date(122, 05, 29), "Word"));
+        documents.add(new Document("Text", new Date(122, 04, 29), "Word"));
 
     }
 
@@ -76,4 +71,35 @@ public class DocumentManagementSystem {
             System.out.println("No results found.");
         }
     }
+        
+      
+    public void showList() { 
+
+        if (!documents.isEmpty()) {
+            System.out.println("Document List:");
+            for (Document doc : documents) {
+                System.out.println(doc.getName() + " - " + doc.getDate() + " - " + doc.getFileType());
+            }
+        } else {
+            System.out.println("No documents found.");
+        }
+    }
+    
+ public void operations() {
+    System.out.println("Document Manager");
+    System.out.println("1. Add Document");
+    System.out.println("2. Remove Document");
+    System.out.println("3. Search Documents");
+    System.out.print("Enter your choice: ");
+    int choice = scanner.nextInt();
+    scanner.nextLine();
+    switch (choice) {
+      case 1 -> addDocument();
+      case 2 -> removeDocument();
+      case 3 -> searchDocuments();
+      default -> System.out.println("Invalid choice. Please try again.");
+    }
+  }
 }
+
+

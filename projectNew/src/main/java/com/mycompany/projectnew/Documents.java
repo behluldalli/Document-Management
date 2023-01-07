@@ -4,8 +4,6 @@
  */
 package com.mycompany.projectnew;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -14,23 +12,26 @@ import java.util.Scanner;
  */
 class Documents {
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
         DocumentManagementSystem doc = new DocumentManagementSystem();
-        System.out.println("Please select 1 -> add, 2 -> delete, 3 -> search");
-        Scanner sc = new Scanner(System.in);
-        int b = sc.nextInt();
+        selection(doc);
+    }
 
-        switch (b) {
+    private static void selection(DocumentManagementSystem doc) {
+           Scanner sc = new Scanner(System.in);
+        System.out.println("Please Select 1 -> Documents, 2 -> Operations");
+        int a =sc.nextInt();
+
+                switch (a) {
             case 1 ->
-                doc.addDocument();
-            case 2 ->
-                doc.removeDocument();
-            case 3 ->
-                doc.searchDocuments();
-            default -> {
-                System.out.println("Hatali secim.");
-
-            }
+                    doc.showList();
+            case 2 ->doc.operations();
+                   
+            default -> System.out.println("Invalid Choice.");
         }
+
+
+
+        selection(doc);
     }
 }
