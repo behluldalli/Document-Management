@@ -12,25 +12,25 @@ import java.util.Scanner;
  */
 class Documents {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         DocumentManagementSystem doc = new DocumentManagementSystem();
         selection(doc);
     }
 
     private static void selection(DocumentManagementSystem doc) {
-           Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Please Select 1 -> Documents, 2 -> Operations");
-        int a =sc.nextInt();
+        int a = sc.nextInt();
 
-                switch (a) {
+        switch (a) {
             case 1 ->
-                    doc.showList();
-            case 2 ->doc.operations();
-                   
-            default -> System.out.println("Invalid Choice.");
+                doc.showList();
+            case 2 ->
+                doc.operations();
+
+            default ->
+                System.out.println("Invalid Choice.");
         }
-
-
 
         selection(doc);
     }
