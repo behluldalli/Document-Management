@@ -25,8 +25,8 @@ public class DocumentManagementSystem {
         documents.add(new Document("Introduction", new Date(122, 01, 05), "PDF"));
         documents.add(new Document("Lab Session", new Date(123, 01, 02), "PDF"));
         documents.add(new Document("Summary", new Date(122, 11, 17), "Word"));
-        documents.add(new Document("Classes", new Date(122, 06, 19), "Word"));
-        documents.add(new Document("Java", new Date(122, 05, 29), "Word"));
+        documents.add(new Document("Child", new Date(122, 06, 19), "JPG"));
+        documents.add(new Document("Photo1", new Date(122, 05, 29), "JPG"));
         documents.add(new Document("Text", new Date(122, 04, 29), "Word"));
 
     }

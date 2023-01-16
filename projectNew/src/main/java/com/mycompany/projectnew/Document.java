@@ -18,7 +18,7 @@ class Document {
 
     public Document(String name, Date date, String fileType) {
         this.name = name;
-        this.date = date;
+        this.date = new Date();
         this.fileType = fileType;
     }
 
