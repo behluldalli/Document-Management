@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="368.33333333333337" y="86.33333333333331">com.mycompany.projectnew.DocumentManagementSystem</node>
+    <node x="213.33333333333337" y="190.83333333333331">com.mycompany.projectnew.WordDocument</node>
+    <node x="426.00000000000006" y="135.33333333333331">com.mycompany.projectnew.Document</node>
+    <node x="595.3333333333334" y="190.83333333333331">com.mycompany.projectnew.Photos</node>
+    <node x="213.33333333333337" y="86.33333333333331">com.mycompany.projectnew.Documents</node>
+    <node x="409.83333333333337" y="320.3333333333333">com.mycompany.projectnew.PDFDocument</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.mycompany.projectnew.WordDocument" target="com.mycompany.projectnew.Document" relationship="GENERALIZATION">
+      <point x="79.0" y="-0.0" />
+      <point x="-62.0" y="-0.0" />
+    </edge>
+    <edge source="com.mycompany.projectnew.Photos" target="com.mycompany.projectnew.Document" relationship="GENERALIZATION">
+      <point x="-53.0" y="-0.0" />
+      <point x="62.0" y="-0.0" />
+    </edge>
+    <edge source="com.mycompany.projectnew.PDFDocument" target="com.mycompany.projectnew.Document" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="483.33333333333337" y="209.0" />
+      <point x="488.00000000000006" y="209.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.5" showDependencies="false" x="541.3333333333334" y="271.3333333333333" />
+  <SelectedNodes>
+    <node>com.mycompany.projectnew.Photos</node>
+    <node>com.mycompany.projectnew.DocumentManagementSystem</node>
+    <node>com.mycompany.projectnew.Document</node>
+    <node>com.mycompany.projectnew.WordDocument</node>
+    <node>com.mycompany.projectnew.Documents</node>
+    <node>com.mycompany.projectnew.PDFDocument</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

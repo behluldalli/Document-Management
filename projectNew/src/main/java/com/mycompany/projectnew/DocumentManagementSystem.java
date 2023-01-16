@@ -65,7 +65,7 @@ public class DocumentManagementSystem {
         if (!searchResults.isEmpty()) {
             System.out.println("Search results:");
             for (Document doc : searchResults) {
-                System.out.println(doc.getName());
+                System.out.println(doc.getName() + "found");
             }
         } else {
             System.out.println("No results found.");
